@@ -1,0 +1,38 @@
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin: 25px 15px;
+}
+.newsletter > div{
+    margin: 0 auto;
+}
+.newsletter div > div label{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.newsletter button{
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+.newsletter_errorMessage{
+    display: block;
+    font-size: 0.7rem;
+    text-align: right;
+    color: red;
+}
+
+@media screen and (min-width: 768px) {
+    .newsletter > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 15px;
+    }
+}

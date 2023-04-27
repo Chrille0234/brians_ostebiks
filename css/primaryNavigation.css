@@ -8,18 +8,62 @@
     overflow-x: hidden;
 
     transform: translateX(100%);
-    transition: transform 100ms ease-out;
+    transition: transform 500ms ease-out;
 }
 .primaryNavigation--show{
     position: absolute;
     transform: translateX(0);
+    padding: 1em;
 }
 .primaryNavigation_menu{
-    padding: 1em;
     list-style: none;
 }
 
 .burgerMenuButton{
     border: none;
     background: transparent
+}
+.primaryNavigation_form{
+    position: relative;
+    padding: 1.5em 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.primaryNavigation_form .feather-search{
+    position: absolute;
+    right: 5px;
+    transform: scale(0.8);
+}
+.primaryNavigation_form input{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .burgerMenuButton{
+        display: none;
+    }
+    .primaryNavigation_form{
+        padding: 0;
+        flex-direction: row;
+    }
+    .primaryNavigation{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 50px;
+        position: static;
+        transform: none;
+        transition: none;
+
+        height: auto;
+        width: auto;
+        padding: 0;
+        
+    }
+    .primaryNavigation_menu{
+        display: flex;
+        gap: 50px;
+        padding: 0;
+    }
 }
